@@ -1,0 +1,307 @@
+<div class="about5">
+        <div class="F6__Container">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    {% for block in section.blocks %}
+                        <div class="swiper-slide">
+                            <div class="item">
+                                <a href=""><img src="{{ block.settings.image | img_url: 'master' }}"
+                                    data-src="{{ block.settings.image | img_url: '1000x1000' }}" alt="" class="img1"></a>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <div class="content2-textbox">
+                <div class="textbox-sub"></div>
+                <div class="textbox-heading">
+                    EXPLORE OUR OUTSTANDING FEATURES
+                </div>
+                <div class="textbox-text">
+                    We create category leading brand experiences that have meaning and add a value for our clients.
+                </div>
+
+                <a href="#" class="textbox-about">Explore</a>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        * {
+    box-sizing: border-box;
+}
+
+.about5 {
+    /* padding: 50px 15px; */
+}
+
+.content2-textbox .textbox-sub {
+    margin-bottom: 6px;
+    color: #69727b;
+    font-family: 'Shippori Mincho', serif;
+}
+
+.content2-textbox .textbox-heading {
+    letter-spacing: 0.1em;
+    color: #3d4246;
+    line-height: 1.5;
+    font-weight: bold;
+    font-family: 'Shippori Mincho', serif;
+    margin-bottom: 17.5px;
+}
+
+.content2-textbox .textbox-text {
+    font-size: 18px;
+    color: #69727b;
+    line-height: 1.5;
+    font-family: 'Shippori Mincho', serif;
+    margin-bottom: 35px;
+    letter-spacing: normal;
+}
+
+.content2-textbox .textbox-about {
+    font-family: 'Shippori Mincho', serif;
+    text-decoration: none;
+
+    color: #ffffff !important;
+    font-size: 15px !important;
+    font-weight: bold !important;
+    font-style: normal !important;
+    background: linear-gradient(
+120deg
+, #25aae1 0%, #40e495 40%, #30dd8a 60%, #0fc369 120%);
+    background-size: 300% 100%;
+    opacity: 0.8 !important;
+    padding: 10px 25px !important;
+    border: 0px solid #fff !important;
+    border-radius: 0px !important;
+    text-transform: uppercase !important;
+    transition: 0.5s !important;
+}
+
+.content2-textbox .textbox-about:hover {
+    color: #ffffff !important;
+    font-size: 15px !important;
+    font-weight: bold !important;
+    font-style: normal !important;
+    background: linear-gradient(
+120deg
+, #25aae1 0%, #40e495 40%, #30dd8a 60%, #0fc369 120%);
+    background-size: 300% 100%;
+    background-position: 100% 0 !important;
+    opacity: 0.8 !important;
+    padding: 10px 25px !important;
+    border: 0px solid #fff !important;
+    border-radius: 0px !important;
+    text-transform: uppercase !important
+}
+
+.Info-ul {
+    background-color: #fff;
+    box-shadow: 0 0 15px rgb(0 0 0 / 20%);
+    margin-top: 20px;
+    padding: 0 0;
+}
+
+.Info-ul .Info-li {
+    text-align: center;
+    border-bottom: 1px solid #e4e4e4;
+    padding: 20px 15px;
+    list-style: none;
+    font-family: 'Shippori Mincho', serif;
+    line-height: 1;
+}
+
+.Info-ul .Info-li h3 {
+    line-height: 1.2;
+    margin-bottom: 0;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.Info-ul .Info-li span {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#value #value2 #value3 {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+@media (min-width: 500px) {
+    .about5 {
+        margin: 0px 20px;
+        max-width: 540px;
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+
+    .Info-ul {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .Info-ul .Info-li {
+        width: 50%;
+        border-right: 1px solid #e4e4e4;
+        border-bottom: 0;
+    }
+}
+
+@media (min-width: 768px) {
+    .about5 {
+        max-width: 720px;
+        padding: 80px 0;
+    }
+}
+
+@media (min-width: 992px) {
+    .about5 {
+        max-width: 960px;
+        padding: 90px 0;
+        margin: 0px 0px;
+    }
+
+    .about5 .about5__Content2 {
+        display: flex;
+        flex-direction: row-reverse !important;
+        align-items: center !important;
+    }
+
+    .about5 .about5__Content2 .content2-textbox {
+        width: 50%;
+        padding: 0px 15px;
+    }
+
+    .about5 .about5__Content2 .about5__Info {
+        width: 50%;
+        padding: 0px 15px;
+    }
+
+    .F6__Container {
+        display: flex;
+        align-items: center;
+    }
+    
+    .content2-textbox {
+        max-width: 41.6%;
+        margin-left: 5%;
+    }
+
+    .swiper-container {
+        width: 50%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .about5 {
+        max-width: 1300px;
+        padding: 100px 0px;
+    }
+
+    .about5 .about5__Content2 .content2-textbox {
+        margin-left: 8.333333%;
+    }
+
+    .Info-ul {
+        padding: 35px 0px;
+        margin-top: 0;
+    }
+
+    .Info-ul .Info-li {
+        width: 33.333333%;
+
+    }
+}
+
+
+/* swiper */
+html,
+    body {
+      position: relative;
+      height: 100%;
+    }
+
+    .swiper-container {
+      width: 100%;
+      height: 100%;
+      
+    }
+
+    .swiper-wrapper {
+        display: flex;
+        align-items: center;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      width: 375px;
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    }
+
+    .swiper-slide img {
+        background-size: cover;
+        width: 90%;
+        
+    }
+
+    .item {
+        transform-origin: left;
+        transform: scale(0.9);
+        
+    }
+
+    @media (min-width: 1024px) {
+        .swiper-slide-duplicate-prev img {
+            width: 100%;
+        }
+    }
+    </style>
+
+{% schema %}
+{
+    "name": "Hisu test 2",
+    "settings": [
+        
+    ],
+
+    "max_blocks": 3,
+    "blocks": [
+        {
+            "type": "testimonial",
+            "name": "Testimonial",
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "Hisu Image"
+                }
+            ]
+        }
+    ],
+
+    "presets": [
+        {
+            "name": "Hisu test 2",
+            "category": "Custom 2"
+        }
+    ]
+}
+{% endschema %}

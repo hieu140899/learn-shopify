@@ -1,0 +1,72 @@
+<div class="container">
+    <div class="testimonial__content">
+        <div class="testimonial__list-item">
+            {% for block in section.blocks %}
+                <div class="testimonial__item">
+                    <div class="testimonial__item-img">
+                        <img class="xo-img--lazyLoad"
+                                        src="{{ block.settings.image | img_url: '1000x1000' }}"
+                                        data-src="{{ block.settings.image | img_url: '1000x1000' }}" alt="">
+                    </div>
+                    <div class="testimonial__item-text">
+                        <div class="testimonial__item-title">
+                            <h3>{{ block.settings.title }}</h3>
+                        </div>
+                        <div class="testimonial__item-desc">
+                            <p>{{ block.settings.desc }}</p>
+                        </div>
+                        <a href="{{ block.settings.url_shop_products }}">Shop Products</a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+{% schema %}
+{
+    "name": "Hisu test",
+    "settings": [
+        
+    ],
+
+    "max_blocks": 3,
+    "blocks": [
+        {
+            "type": "testimonial",
+            "name": "Testimonial",
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "Hisu Image"
+                },
+                {
+                    "type": "text",
+                    "id": "title",
+                    "label": "Hisu Title",
+                    "default": "Hisu test Title"
+                },
+                {
+                    "type": "text",
+                    "id": "desc",
+                    "label": "Hisu Description",
+                    "default": "Hisu. Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque numquam sequi accusantium inventore tempore hic ducimus eveniet esse libero! Vero tempora neque non dicta iure doloribus ad ipsum consequuntur velit?"
+                },
+                {
+                    "type": "url",
+                    "id": "url_shop_products",
+                    "label": "URL Shop Product"
+                }
+            ]
+        }
+    ],
+
+    "presets": [
+        {
+            "name": "Hisu test 1",
+            "category": "Custom 1"
+        }
+    ]
+}
+{% endschema %}
