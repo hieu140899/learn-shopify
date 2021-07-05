@@ -1,0 +1,303 @@
+<div class="pageOverlay"></div>
+<div class="pageOverlay2"></div>
+<div class="pageOverlay2"></div>
+
+<div class="Section-Auguste">
+  <div class="Auguste-container">
+      <div class="Auguste-header">
+          <div class="header-subtitle">
+              Welcome To
+          </div>
+          <div class="header-title">
+            {{ section.settings.title1 }}
+          </div>
+          <div class="header-desc">
+              {{ section.settings.text1 }}
+          </div>
+      </div>
+      <div class="Auguste-content1">
+          <div class="Auguste-content1-imagebox">
+              <div class="image1">
+                {%- assign block_image = section.settings.image1 -%}
+                {% if block_image == blank %}
+                    {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+                {% else %}
+                    <img src="{{ section.settings.image1 | img_url: 'master' }}"
+                        data-src="{{ section.settings.image1 | img_url: '1000x1000' }}" alt="" class="img1">
+                {% endif %}
+              </div>
+              <div class="image2">
+                {%- assign block_image2 = section.settings.image2 -%}
+                {% if block_image2 == blank %}
+                    {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+                {% else %}
+                    <img src="{{ section.settings.image2 | img_url: 'master' }}"
+                        data-src="{{ section.settings.image2 | img_url: '1000x1000' }}" alt="" class="img1">
+                {% endif %}
+              </div>
+          </div>
+          <div class="Auguste-content1-choosebox">
+              <div class="choosebox-productname">
+                  {{ section.settings.productName }}
+              </div>
+              <div class="choosebox-price">
+                  {{ section.settings.price }}
+              </div>
+              <div class="choosebox-pickcolor">
+                  <div class="colorname">
+                      <div class="color-name1">Color: {{ section.settings.color1 }} </div>
+                      <div class="color-name2">Color: {{ section.settings.color2 }} </div>
+                  </div>
+                  <div class="colorpreview">
+                      <div class="color-item item1 active-border">
+                        {%- assign block_image = section.settings.image1 -%}
+                        {% if block_image == blank %}
+                            {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+                        {% else %}
+                            <img src="{{ section.settings.image1 | img_url: 'master' }}"
+                                data-src="{{ section.settings.image1 | img_url: '1000x1000' }}" alt="" class="img1">
+                        {% endif %}
+                      </div>
+                      <div class="color-item item2">
+                        {%- assign block_image2 = section.settings.image2 -%}
+                        {% if block_image2 == blank %}
+                            {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+                        {% else %}
+                            <img src="{{ section.settings.image2 | img_url: 'master' }}"
+                                data-src="{{ section.settings.image2 | img_url: '1000x1000' }}" alt="" class="img1">
+                        {% endif %}
+                      </div>
+                  </div>
+              </div>
+              <div class="choosebox-sizepicker">
+                  <div class="label">
+                      Size:
+                      <div class="chart-btn">Size chart</div>
+                  </div>
+
+
+
+                  <div class="size-table">
+                      <div class="size-box">
+                          <div class="size-box-header">
+                              <span class="size-box-header-btn">
+                                  <svg class="Icon Icon--close" role="presentation" viewBox="0 0 16 14" style="height: 16px; width: 16px;">
+                                      <path d="M15 0L1 14m14 0L1 0" stroke="currentColor" fill="none" fill-rule="evenodd"></path>
+                                  </svg>
+                              </span>
+                              <span class="size-box-header-label">Size</span>
+                          </div>
+                          <ul class="size-box-option">
+                              <li><a href="" class="option-item">XS</a></li>
+                              <li><a href="" class="option-item">S</a></li>
+                              <li><a href="" class="option-item">M</a></li>
+                              <li><a href="" class="option-item">L</a></li>
+                          </ul>
+                      </div>
+
+                      <div class="pick-btn">
+                          <span>XS</span>
+                          <span class="pick-icon">
+                              <svg class="Icon Icon--select-arrow" role="presentation" viewBox="0 0 19 12" style="width: 12px; height: 12px;">
+                                  <polyline fill="none" stroke="currentColor" points="17 2 9.5 10 2 2" fill-rule="evenodd" stroke-width="2" stroke-linecap="square"></polyline>
+                              </svg>
+                          </span>
+                      </div>
+                  </div>
+                  <div class="textsub">Only 2 pieces in stock!</div>
+              </div>
+              <div class="choosebox-btn">
+                  <div>
+                      <a href="" class="augustebtn btn-add">ADD TO CART</a>
+                  </div>
+                  <div>
+                      <a href="" class="augustebtn btn-buy">BUY IT NOW</a>
+                  </div>
+                  <a href="" class="btn-details">View product details</a>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+<div class="choosebox-sizechart" data-scrollable>
+  <div class="sizechart-header">Size Chart</div>
+  <div class="sizechart-container">
+      <div class="TableWrapper"><table width="100%">
+          <tbody>
+          <tr style="height: 36px;">
+          <td style="height: 36px;">
+          <p>&nbsp;Size AU</p>
+          </td>
+          <td style="height: 36px;">
+          <p>Size US</p>
+          </td>
+          <td style="height: 36px;">
+          <p>Size UK</p>
+          </td>
+          <td style="height: 36px;">
+          <p>Bust (cm/inch)</p>
+          </td>
+          <td style="height: 36px;">
+          <p>Waist (cm/inch)</p>
+          </td>
+          <td style="height: 36px;">
+          <p>Hip (cm/inch)</p>
+          </td>
+          </tr>
+          <tr style="height: 22px;">
+          <td style="height: 22px;">6</td>
+          <td style="height: 22px;">2</td>
+          <td style="height: 22px;">6</td>
+          <td style="height: 22px;">80cm / 31.5"</td>
+          <td style="height: 22px;">64cm / 25.2"</td>
+          <td style="height: 22px;">90cm / 35.4"</td>
+          </tr>
+          <tr style="height: 22px;">
+          <td style="height: 22px;">8</td>
+          <td style="height: 22px;">4</td>
+          <td style="height: 22px;">8</td>
+          <td style="height: 22px;">
+          <div><meta charset="utf-8"></div>
+          <span>85</span><span>cm / 33.5"</span>
+          </td>
+          <td style="height: 22px;">
+          <div><meta charset="utf-8"></div>
+          <span>68cm / 26.7"</span>
+          </td>
+          <td style="height: 22px;">
+          <div><meta charset="utf-8"></div>
+          <span>90cm / 35.4"</span>
+          </td>
+          </tr>
+          <tr style="height: 22px;">
+          <td style="height: 22px;">10</td>
+          <td style="height: 22px;">6</td>
+          <td style="height: 22px;">10</td>
+          <td style="height: 22px;">
+          <div><meta charset="utf-8"></div>
+          <span>90</span><span>cm / 35.5"</span>
+          </td>
+          <td style="height: 22px;">
+          <div><meta charset="utf-8"></div>
+          <span>72cm / 28.3"</span>
+          </td>
+          <td style="height: 22px;">
+          <div><meta charset="utf-8"></div>
+          <span>90cm / 35.4"</span>
+          </td>
+          </tr>
+          <tr style="height: 24px;">
+          <td style="height: 24px;">12</td>
+          <td style="height: 24px;">8</td>
+          <td style="height: 24px;">12</td>
+          <td style="height: 24px;">
+          <div><meta charset="utf-8"></div>
+          <span>95cm / 37.4"</span>
+          </td>
+          <td style="height: 24px;">
+          <div><meta charset="utf-8"></div>
+          <span>76cm / 29.9"</span>
+          </td>
+          <td style="height: 24px;">
+          <div><meta charset="utf-8"></div>
+          <span>90cm / 35.4"</span>
+          </td>
+          </tr>
+          <tr style="height: 22px;">
+          <td style="height: 22px;">14</td>
+          <td style="height: 22px;">10</td>
+          <td style="height: 22px;">14</td>
+          <td style="height: 22px;">100cm / 39.4"</td>
+          <td style="height: 22px;">80cm / 31.5"</td>
+          <td style="height: 22px;">109cm / 42.9"</td>
+          </tr>
+          </tbody>
+          </table></div>
+
+          <div class="title">How to measure</div>
+          <ul class="sizechart-ul">
+              <li>Bust: measure under your arms at the fullest part of your bust. Keep the tape level.</li>
+              <li>Waist: measure around your natural waistline, keeping the tape comfortably loose. This is the narrowest part of the body between the ribs and the hips.</li>
+              <li>Hip: stand with your feet together and measure around the fullest part of your hips.</li>
+          </ul>
+  </div>
+  <div class="sizechart-btn">
+      <button class="closechart-btn">
+          <svg class="Icon Icon--close" role="presentation" viewBox="0 0 16 14" style="height: 16px; width: 16px;">
+              <path d="M15 0L1 14m14 0L1 0" stroke="currentColor" fill="none" fill-rule="evenodd"></path>
+          </svg>
+      </button>
+  </div>
+</div>
+
+{% schema %}
+{
+    "name": "Hisu test 3",
+
+    "settings": [
+        {
+            "type": "text",
+            "id": "title1",
+            "label": "Hisu Title",
+            "default": "Write some title here..."
+        },
+
+        {
+            "type": "text",
+            "id": "text1",
+            "label": "Hisu Text",
+            "default": "Write some text here..."
+        },
+
+        {
+            "type": "text",
+            "id": "productName",
+            "label": "Hisu Product name",
+            "default": "Product name..."
+        },
+
+        {
+            "type": "text",
+            "id": "price",
+            "label": "Hisu Price",
+            "default": "0$"
+        },
+
+        {
+            "type": "text",
+            "id": "color1",
+            "label": "Hisu Color",
+            "default": "Nani da fuk?"
+        },
+
+        {
+            "type": "text",
+            "id": "color2",
+            "label": "Hisu Color",
+            "default": "Nani da fuk?"
+        },
+
+        {
+          "type": "image_picker",
+          "id": "image1",
+          "label": "Hisu Image"
+        },
+
+        {
+          "type": "image_picker",
+          "id": "image2",
+          "label": "Hisu Image"
+        }
+    ],
+
+
+
+    "presets": [
+        {
+            "name": "Hisu test 3",
+            "category": "Custom 3"
+        }
+    ]
+}
+{% endschema %}

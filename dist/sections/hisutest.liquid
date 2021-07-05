@@ -5,8 +5,13 @@
                     {% for block in section.blocks %}
                         <div class="swiper-slide">
                             <div class="item">
-                                <a href=""><img src="{{ block.settings.image | img_url: 'master' }}"
-                                    data-src="{{ block.settings.image | img_url: '1000x1000' }}" alt="" class="img1"></a>
+                            {%- assign block_image = block.settings.image -%}
+                            {% if block_image == blank %}
+                                {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+                            {% else %}
+                                <img src="{{ block.settings.image | img_url: 'master' }}"
+                                    data-src="{{ block.settings.image | img_url: '1000x1000' }}" alt="" class="img1">
+                            {% endif %}
                             </div>
                         </div>
                     {% endfor %}
@@ -16,10 +21,10 @@
             <div class="content2-textbox">
                 <div class="textbox-sub"></div>
                 <div class="textbox-heading">
-                    EXPLORE OUR OUTSTANDING FEATURES
+                    <h3>{{ section.settings.title1 }}</h3>
                 </div>
                 <div class="textbox-text">
-                    We create category leading brand experiences that have meaning and add a value for our clients.
+                    <p>{{ section.settings.text1 }}</p>
                 </div>
 
                 <a href="#" class="textbox-about">Explore</a>
@@ -185,7 +190,7 @@
         display: flex;
         align-items: center;
     }
-    
+
     .content2-textbox {
         max-width: 41.6%;
         margin-left: 5%;
@@ -228,7 +233,7 @@ html,
     .swiper-container {
       width: 100%;
       height: 100%;
-      
+
     }
 
     .swiper-wrapper {
@@ -259,13 +264,13 @@ html,
     .swiper-slide img {
         background-size: cover;
         width: 90%;
-        
+
     }
 
     .item {
         transform-origin: left;
         transform: scale(0.9);
-        
+        position: relative;
     }
 
     @media (min-width: 1024px) {
@@ -279,7 +284,19 @@ html,
 {
     "name": "Hisu test 2",
     "settings": [
-        
+        {
+            "type": "text",
+            "id": "title1",
+            "label": "Hisu Title",
+            "default": "Write some title here..."
+        },
+
+        {
+            "type": "text",
+            "id": "text1",
+            "label": "Hisu Text",
+            "default": "Write some text here..."
+        }
     ],
 
     "max_blocks": 3,

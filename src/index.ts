@@ -11,6 +11,7 @@ import './pages/Header';
 import './helpers';
 import './pages';
 import './sections/index';
+import './sections/auguste';
 import './snipets';
 
 /**

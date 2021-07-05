@@ -1,0 +1,120 @@
+<div class="Section--Blog">
+  <div class="blog-container">
+      <div class="blog-header">
+          <div class="heading">News</div>
+          <div class="title">From the Blog</div>
+      </div>
+      <div class="blog-content">
+        {% for block in section.blocks %}
+          <div class="item-box">
+              <div class="item-imagebox">
+                {%- assign block_image = block.settings.image -%}
+                {% if block_image == blank %}
+                    {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+                {% else %}
+                    <img src="{{ block.settings.image | img_url: 'master' }}"
+                        data-src="{{ block.settings.image | img_url: '1000x1000' }}" alt="" class="img1">
+                {% endif %}
+              </div>
+              <div class="item-textbox">
+                  <a href="" class="textbox-title"> {{ block.settings.title1 }} </a>
+                  <div class="textbox-desc">
+                    {{ block.settings.text1 }}
+                  </div>
+                  <a href="" class="read-btn">Read more</a>
+              </div>
+          </div>
+        {% endfor %}
+          <!-- <div class="item-box">
+              <div class="item-imagebox">
+                  <img src="./images/cover-2_400px.jpg" alt="">
+              </div>
+              <div class="item-textbox">
+                  <a href="" class="textbox-title">For the Love of Oceans</a>
+                  <div class="textbox-desc">
+                      In conversation with: Brinkley Davies They say to follow your heart, which in Brinkley Davies’ case has led her to big things – the oceans, for one...
+                  </div>
+                  <a href="" class="read-btn">Read more</a>
+              </div>
+          </div>
+          <div class="item-box col-tablet-hidden">
+              <div class="item-imagebox">
+                  <img src="./images/cover-3_400px.jpg" alt="">
+              </div>
+              <div class="item-textbox">
+                  <a href="" class="textbox-title">The Superbloom Launch</a>
+                  <div class="textbox-desc">
+                      To welcome The Superbloom and celebrate all the love and hard work that went into this collection, we recently gathered the team and headed for a f...
+                  </div>
+                  <a href="" class="read-btn">Read more</a>
+              </div>
+          </div> -->
+      </div>
+
+      <div class="blog-btn1">
+        {% if section.settings.button_label != blank and section.settings.button_link != blank %}
+
+        <a href="{{ section.settings.button_link }}"
+          class="btn blog-btn">
+          {{- section.settings.button_label | escape -}}
+        </a>
+      {% endif %}
+      </div>
+  </div>
+</div>
+
+{% schema %}
+{
+    "name": "Hisu test blog",
+
+    "settings": [
+      {
+        "type": "url",
+        "id": "button_link",
+        "label": "Hisu Button Link"
+      },
+
+      {
+          "type": "text",
+          "id": "button_label",
+          "label": "Hisu Button Label"
+      }
+    ],
+
+    "max_blocks": 3,
+    "blocks": [
+        {
+            "type": "testimonial",
+            "name": "Testimonial",
+            "settings": [
+                {
+                  "type": "text",
+                  "id": "title1",
+                  "label": "Hisu Title",
+                  "default": "Write some title here..."
+                },
+
+                {
+                    "type": "text",
+                    "id": "text1",
+                    "label": "Hisu Text",
+                    "default": "Write some text here..."
+                },
+
+                {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "Hisu Image"
+                }
+            ]
+        }
+    ],
+
+    "presets": [
+        {
+            "name": "Hisu test blog",
+            "category": "Custom 4"
+        }
+    ]
+}
+{% endschema %}
